@@ -10,7 +10,7 @@ public class SkipList<K, V> {
 
 	private Random ran = new Random();
 
-	private int randomLevel() {// Å×Ó²±Ò
+	private int randomLevel() {// æŠ›ç¡¬å¸
 
 		int k = 1;
 
@@ -134,7 +134,7 @@ public class SkipList<K, V> {
 		// }
 
 		if (n != null && compare(x, n)) {
-			// ´óÓÚ
+			// ï¿½ï¿½ï¿½ï¿½
 			if (i < (maxLevel - 1)) {
 
 				return find(n, x, n.next[i + n.level - maxLevel], i);
@@ -243,7 +243,7 @@ public class SkipList<K, V> {
 			}
 
 		} else {
-			// Ğ¡ÓÚ null
+			// Ğ¡ï¿½ï¿½ null
 			if ((maxLevel - f_index) <= x.level) {
 				f.next[f.level + f_index - maxLevel] = x;
 				x.next[x.level + f_index - maxLevel] = l;
@@ -426,7 +426,7 @@ public class SkipList<K, V> {
 	 * private Entity<K, V> find(Entity<K, V> ff, Entity<K, V> ll, Entity<K, V>
 	 * x, int c) { // TODO Auto-generated method stub
 	 * 
-	 * if (ll != null) { if (compare(x, ll)) { // ´óÓÚ return find(ll, ll.next[c],
+	 * if (ll != null) { if (compare(x, ll)) { // ï¿½ï¿½ï¿½ï¿½ return find(ll, ll.next[c],
 	 * x, c);
 	 * 
 	 * } else {
