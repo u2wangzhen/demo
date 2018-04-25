@@ -134,7 +134,7 @@ public class SkipList<K, V> {
 		// }
 
 		if (n != null && compare(x, n)) {
-			// ����
+			// 大于
 			if (i < (maxLevel - 1)) {
 
 				return find(n, x, n.next[i + n.level - maxLevel], i);
@@ -243,7 +243,7 @@ public class SkipList<K, V> {
 			}
 
 		} else {
-			// С�� null
+			// 小于或者null
 			if ((maxLevel - f_index) <= x.level) {
 				f.next[f.level + f_index - maxLevel] = x;
 				x.next[x.level + f_index - maxLevel] = l;
